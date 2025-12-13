@@ -1,3 +1,5 @@
+package WIX1002_VIVA_2;
+
 import java.util.Scanner;
 
 public class Q6 {
@@ -52,22 +54,19 @@ public class Q6 {
         
         Scanner sc = new Scanner(System.in);
 
+        sc.useDelimiter(",|\\s+");
+
         System.out.print("Array A: ");
 
-        String lineA = sc.nextLine();
-        String[] partsA = lineA.split(",");
-
-        int[] a = new int[partsA.length];
-        for (int j = 0; j < partsA.length; j++) {
-            a[j] = Integer.parseInt(partsA[j].trim());
+        int [] a = new int[3];
+        for (int i = 0; i < 3; i++) {
+            a[i] = sc.nextInt();
         }
 
         System.out.print("Array B: ");
-        String lineB = sc.nextLine();
-        String[] partsB = lineB.split(",");
-        int[] b = new int[partsB.length];
-        for (int j = 0; j < partsB.length; j++) {
-            b[j] = Integer.parseInt(partsB[j].trim());
+        int [] b = new int[3];
+        for (int i = 0; i < 3; i++) {
+            b[i] = sc.nextInt();
         }
 
         System.out.println("Mirror Pattern: " + isMirror(a,b));
